@@ -1,0 +1,24 @@
+.character {
+  --clr-bg: #274851;
+  --clr-glow: #3bcb86;
+  --clr-light: #d3e9e6;
+
+  position: relative;
+  background-color: var(--clr-bg);
+  box-shadow: 0 0 10px 1px #fff inset, 0 0 10px 1px #fff,
+    0 0 30px 5px var(--clr-glow);
+    width: 216px;
+    height: 364px;
+  transform: scale(1.05);
+  background-image: url("../../public/characters.jpg");
+  background-size: 700%;
+}
+
+.character::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: var(--clr-light);
+  box-shadow: 0 0 10px var(--clr-glow);
+  opacity: 0.1;
+}

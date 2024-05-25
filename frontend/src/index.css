@@ -1,0 +1,122 @@
+@font-face {
+  font-family: "DSEG7";
+  src: url("fonts/DSEG7.woff2") format("woff2"),
+    url("fonts/DSEG7.woff") format("woff"),
+    url("fonts/DSEG7.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("fonts/Roboto-Bold.ttf") format("truetype");
+}
+
+:root {
+  --clr-bg: #000;
+  --clr-border: #274851;
+  --clr-glow: #3bcb86;
+  --clr-light: #e1e9ef;
+  --clr-radio: #397977;
+
+  color-scheme: light dark;
+}
+
+/* My minimal reset */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100dvh;
+  margin: 0;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+
+  display: grid;
+  place-content: center;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+
+p {
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+}
+
+/* My styles */
+
+body {
+  background-color: var(--clr-bg);
+}
+
+body::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: #1210101a;
+  opacity: 0;
+  z-index: 2;
+}
+
+body::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+    linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 0.06),
+      rgba(0, 255, 0, 0.02),
+      rgba(0, 0, 255, 0.06)
+    );
+  background-size: 100% 2px, 3px 100%;
+  z-index: 2;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

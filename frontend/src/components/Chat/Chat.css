@@ -1,0 +1,16 @@
+form {
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  padding-inline: 1.5rem;
+  border: 4px solid var(--clr-border);
+  box-shadow: 0 0 10px 0px #274851, 0 0 10px 0px #274851 inset;
+}
+
+input {
+  font-family: "Roboto Bold", monospace;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  outline: none;
+}

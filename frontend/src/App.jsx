@@ -1,16 +1,14 @@
 import "./App.css";
-import io from "socket.io-client";
 import Display from "./components/Display/Display";
+import Chat from "./components/Chat/Chat";
 
-const socket = io("/");
 
 function App() {
   return (
     <main className="container">
       <Display />
 
-      <form>
-      </form>
+      <Chat/>
     </main>
   );
 }
